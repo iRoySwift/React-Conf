@@ -15,25 +15,25 @@ const UnmemoziedTodo: React.FC<Props> = ({ id, marked, name, onChange }) => {
     });
     return (
         <div
-            className="flex flex-row items-center justify-between  bg-cyan-700/30  rounded-full p-4 mt-3 cursor-pointer"
+            className="mt-3 flex cursor-pointer flex-row  items-center  justify-between rounded-full bg-cyan-700/30 p-4"
             onClick={() => onChange(id)}>
             <div className="flex flex-row items-center">
                 <input
                     checked={marked}
                     readOnly
                     type="checkbox"
-                    className="w-4 h-4 appearance-none outline outline-offset-2 outline-white rounded-full checked:bg-white"
+                    className="h-4 w-4 appearance-none rounded-full outline outline-offset-2 outline-white checked:bg-white"
                 />
                 <span
-                    className={`text-white ml-4 ${
+                    className={`ml-4 text-white ${
                         marked
-                            ? "line-through italic font-light text-gray-200"
+                            ? "font-light italic text-gray-200 line-through"
                             : ""
                     }`}>
                     {name}
                 </span>
             </div>
-            <div className="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-300">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-300">
                 {counter.current}
             </div>
         </div>

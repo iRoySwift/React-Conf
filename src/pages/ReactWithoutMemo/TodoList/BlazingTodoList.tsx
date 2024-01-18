@@ -33,21 +33,21 @@ const BlazingTodoList: React.FC<Props> = () => {
         console.log("🚀 ~ useEffect ~ themeColor:", themeColor);
     }, [themeColor]);
     return (
-        <div className="flex flex-row justify-center w-full gap-5">
-            <div className="flex flex-col w-1/3 justify-center">
+        <div className="flex w-full flex-row justify-center gap-5">
+            <div className="flex w-1/3 flex-col justify-center">
                 <div className="flex items-center justify-center">
                     <code>getFiltered()</code> was called{" "}
                     <div
-                        className={`w-5 h-5 text-white rounded flex items-center justify-center bg-red-300`}>
+                        className={`flex h-5 w-5 items-center justify-center rounded bg-red-300 text-white`}>
                         {counter.current}
                     </div>
                     times
                 </div>
-                <div className=" min-h-min bg-gradient-to-b from-cyan-600/80 via-cyan-600/90 to-cyan-600 rounded-2xl p-4">
-                    <div className="flex flex-row justify-between items-center gap-2">
+                <div className=" min-h-min rounded-2xl bg-gradient-to-b from-cyan-600/80 via-cyan-600/90 to-cyan-600 p-4">
+                    <div className="flex flex-row items-center justify-between gap-2">
                         <div className="relative">
                             <div
-                                className={`w-10 h-10 rounded-full cursor-pointer`}
+                                className={`h-10 w-10 cursor-pointer rounded-full`}
                                 style={{ backgroundColor: themeColor }}
                                 onClick={() => setShowColorPicker(true)}></div>
                             <div className="absolute">
@@ -62,7 +62,7 @@ const BlazingTodoList: React.FC<Props> = () => {
                                 )}
                             </div>
                         </div>
-                        <div className="flex flex-1 flex-row items-center justify-evenly  bg-cyan-700/30 text-gray-200  rounded-full p-2  cursor-pointer">
+                        <div className="flex flex-1 cursor-pointer flex-row items-center  justify-evenly rounded-full  bg-cyan-700/30 p-2  text-gray-200">
                             <div
                                 className={`${
                                     visibility == "all" ? "text-white" : ""
@@ -103,7 +103,7 @@ const BlazingTodoList: React.FC<Props> = () => {
                         item => (
                             <li
                                 key={item}
-                                className={`bg-primary-${item} py-3 px-2`}>
+                                className={`bg-primary-${item} px-2 py-3`}>
                                 bg-primary-{item}
                             </li>
                         )

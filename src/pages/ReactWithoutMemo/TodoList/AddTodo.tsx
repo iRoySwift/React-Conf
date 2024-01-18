@@ -31,15 +31,15 @@ const AddTodo: React.FC<Props> = ({ setTodos }) => {
     };
 
     return (
-        <div className="flex flex-row items-center h-14 bg-primary-500  rounded-full mt-3">
+        <div className="mt-3 flex h-14 flex-row items-center  rounded-full bg-primary-500">
             <input
                 value={name}
-                className="w-full h-full outline-none bg-primary-500 p-2 rounded-full text-white"
+                className="h-full w-full rounded-full bg-primary-500 p-2 text-white outline-none"
                 onInput={handleChange}
                 onKeyDown={addTodo}
             />
             <div
-                className="text-white  bg-primary-400 border rounded-full p-2 px-4 mr-2 cursor-pointer"
+                className="mr-2  cursor-pointer rounded-full border bg-primary-400 p-2 px-4 text-white"
                 onClick={addTodo}>
                 Add{counter.current}
             </div>
